@@ -1,12 +1,10 @@
 import discord
 import os
 from discord.ext import commands
-from discord_slash import SlashCommand
 
 
 intents = discord.Intents().all()
 client = commands.Bot(command_prefix = '!', intents=intents)
-slash = SlashCommand(client, sync_commands=True, sync_on_cog_reload=True)
 
 client.remove_command('help')
 @client.event
